@@ -10,7 +10,8 @@ def get_new_student():
     hometown = input("Enter your hometown: ")
     favorite_food = input("Enter your favorite food: ")
     new_dictionary = dict(name=name, hometown=hometown, favorite_food=favorite_food)
-    return new_dictionary
+    students.append(new_dictionary)
+    return students
 
 
 students = [
@@ -47,6 +48,7 @@ while True:
                 print("invalid entry")
     elif user_input == "add":
         print(get_new_student())
+        continue
 
 
     elif user_input == "quit":
