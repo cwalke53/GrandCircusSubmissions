@@ -21,7 +21,7 @@ def get_count(board, outcome):
                 counter += 1
                 print(get_count(board, item))
     return counter
-#print(get_count(new_board, "Empty"))
+#print(get_count(new_board, "Empty"))heyyyyyy
 
 
 official_name = __name__
