@@ -1,7 +1,7 @@
 import checkers
 current_name = __name__
 # Check if running as __main__
-if current_name == "__main__":cdcd
+if current_name == "__main__":
 
     def game():
         board_size = int(input("Choose a board size between 4 and 16: "))
