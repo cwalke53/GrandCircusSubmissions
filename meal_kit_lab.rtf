@@ -39,7 +39,7 @@
 {\listtext	24.	}select is_vegetarian, avg(calories) from meals group by is_vegetarian\
 {\listtext	25.	}select subscription_level, min(price) from meals group by subscription_level\
 {\listtext	26.	}select state, count(state) from customers group by state order by state asc\
-{\listtext	27.	}select state, count(state) from customers group by state having count(state) > 5 order by count(state) \
+{\listtext	27.	}select state, count(state) from customers group by state having count(state) >= 5 order by count(state) \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7125\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
