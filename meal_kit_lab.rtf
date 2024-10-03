@@ -9,7 +9,7 @@
 \ls1\ilvl0
 \f0\fs24 \cf0 {\listtext	1.	}Select * records from customers\
 \ls1\ilvl0{\listtext	2.	}select * from customers where subscription_level = 'Premium'\
-{\listtext	3.	}select distinct * from customers\
+{\listtext	3.	}select distinct * from customers order by state\
 {\listtext	4.	}select count(*) from customers where state = 'NY' 
 \f1 \expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec2 order by state;\
@@ -30,7 +30,7 @@
 \pard\tx220\tx585\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7125\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
 \ls1\ilvl0\cf0 {\listtext	17.	}UPDATE meals SET price = price + 5.00 where 'premium' = subscription_level\
 \pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7125\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
-\ls1\ilvl0\cf0 {\listtext	18.	}UPDATE meals SET price = price + 5.00 where 'premium' = subscription_level\
+\ls1\ilvl0\cf0 {\listtext	18.	}select avg(price), max(price), min(price) from meals\
 {\listtext	19.	}SELECT * FROM meals WHERE price BETWEEN 10.00 and 20.00\
 {\listtext	20.	}ALTER TABLE meals ADD INT VARCHAR(255)\
 {\listtext	21.	}create table oops (columns_id SERIAL PRIMARY KEY,  foo INT) drop table oops\
