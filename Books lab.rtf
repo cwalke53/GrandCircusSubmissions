@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww24920\viewh14480\viewkind0
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f0\fs24 \cf0 {\listtext	1.	}CREATE TABLE member (\
+ 		 id SERIAL PRIMARY KEY,\
+  		name VARCHAR(40),\
+ 		 card_number CHAR(10));\
+           CREATE TABLE book (\
+ 		 id SERIAL PRIMARY KEY,\
+  		title VARCHAR(60),\
+  		author VARCHAR(60),\
+ 		 checked_out_by_id INT REFERENCES member);   \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\cf0 \
+   2. INSERT INTO member(name, card_number) VALUES('Annabelle Aster', '772-93-110'), ('Boris Berceli', '000-00-000'), ('Carter Corbin', '282-09-382');\
+\
+   3.    INSERT INTO book(title, author, checked_out_by_id)\
+		VALUES('In Search of Lost Time', 'MarcellProust', 'Annabelle'), \
+		('Ulysses', 'James Joyce', 'Annabelle'), \
+		('Don Quixote', 'Miguel de Cervantes', 'Carter'), \
+		('Moby Dick', 'Herman Melville', \'92NULL);\
+   4.     update member\
+		set card_number = '357-15-964'\
+		where id = '2'\
+  \
+  5.      delete from member \
+		where id = '2'\
+\
+  6.      select * from member \
+		where card_number = '772-93-110'\
+\
+  7.     Select * from book order by title\
+\
+  8.      update book \
+		set checked_out_by_id = 1\
+		where title = 'Moby Dick'\
+  9.      update book \
+		set checked_out_by_id = NULl\
+		where title = 'Ulysses'\
+10.     Select * from book \
+		join member\
+		On book.checked_out_by_id = member.id\
+11. 	select book.title from book \
+		join member on book.checked_out_by_id = member.id 	\
+		where member.name = 'Annabelle Aster';\
+12.	select member.name, member.card_number \
+		from book JOIN member \
+		on book.checked_out_by_id = member.id \
+		where book.author = 'Herman Melville';\
+13.	select author, count(id) \
+		from book\
+		group by author;\
+14. 	Select author, count(id) from book\
+		group by author\
+		having count(id) >= 2;\
+15. 	select member.id, member.name, count(book.id) books_checked_out \
+		from member join book on book.checked_out_by_id = member.id\
+		group by member.id, member.name\
+		order by books_checked_out desc;\
+
+\fs32 \
+\
+\
+\
+\
+\
+\
+}
