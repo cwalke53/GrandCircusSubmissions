@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Light;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green28\blue85;\red255\green0\blue12;
+\red255\green0\blue0;\red255\green0\blue0;\red255\green0\blue0;\red255\green0\blue0;\red255\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cspthree\c100000\c32062\c42310;\cspthree\c99608\c14902\c15686;
+\cspthree\c99608\c19339\c12180;\cspthree\c99608\c23696\c9662;\cspthree\c98405\c13838\c12821;\cspthree\c98405\c9432\c13024;\cspthree\c98405\c8646\c10077;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f0\fs29\fsmilli14667 \cf0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people. (200) - \cf3 db.people.find()\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Count all people. (200)- \cf4 db.people.count()\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people in Arizona. (6)\cf5 db.people.find(\{state:"Arizona"\})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all males in Arizona. (2)\cf5  db.people.find(\{state:"Arizona", gender: "Male"\})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people in Arizona plus New Mexico. (8) \cf6 db.people.find(\{state:\{$in:['New Mexico', "Arizona"]\}\})\cf0 \
+\pard\tx220\tx720\tx1903\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people under age 40. (9) \cf7 db.people.find(\{age: \{$lt:40\}\})\cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all females in Florida between the ages of 40 and 45 (inclusive). (4) \cf7 db.people.find(\{$and: [\{gender: "Female"\}, \{state: "Florida"\}, \{age:\{$gte: 40,$lte: 45\}\}]\})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List people whose first name starts with "H". (2) \cf8 db.people.find(\{ first_name: /^H/ \})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people in Michigan, sorted by first name. (6) \cf8 db.people.find(\{state: "Michigan"\}).sort(\{first_name: 1\})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people who live in Virginia or are named Virginia. \cf8 db.people.find(\{$or: [\{state: "Virginia"\}, \{first_name: "Virginia"\}]\})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List the names of people under age 30. Only display their first and last name. (38) \cf9 db.\cf8 people.find(\{ age:\{$lt: 30\}\},\{first_name: true, last_name: true\})\cf0 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List all people in Montana. Display all information except age. (2) \cf9 db.p\cf8 eople.find(\{state: "Montana"\},\{age:false\})\cf0 \
+\pard\tx220\tx720\tx2342\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 List the email addresses of people with a ".edu" email. Only display the email. (12) \cf9  db.people.find(\{ email: \{ $regex: /\\.edu$/\}\}, \{_id: false, email: true\})\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+}
